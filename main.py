@@ -45,9 +45,7 @@ if __name__=="__main__":
                     gravar_valor(filename, valor_atual)
                     valor_anterior = valor_atual
             else:
-                if valor_atual != valor_anterior:
-                    gravar_valor(filename, '')
-                    valor_anterior = valor_atual
+                gravar_valor(filename, '')
         except Exception,e:
             gravar_valor(filename, '')
             ser.close()
