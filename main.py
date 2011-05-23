@@ -46,8 +46,13 @@ if __name__=="__main__":
                     valor_anterior = valor_atual
             else:
                 gravar_valor(filename, '')
+                valor_anterior = ''
+                valor_atual = ''
+                
         except Exception,e:
             gravar_valor(filename, '')
+            valor_anterior = ''
+            valor_atual = ''
             ser.close()
             ser = serial.Serial(**config)
         time.sleep(0.2)
